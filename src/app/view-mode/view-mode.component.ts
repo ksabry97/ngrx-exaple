@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { AppState } from '../Store/State';
 import { Observable, map } from 'rxjs';
-import { selectData } from '../Store/selector';
+import { getData } from '../Store/selector';
 
 @Component({
   selector: 'app-view-mode',
@@ -14,6 +14,6 @@ export class ViewModeComponent implements OnInit {
   constructor(private store: Store<AppState>) {}
   user!: Observable<UserData>;
   ngOnInit(): void {
-    console.log(this.store.pipe(select(selectData)));
+    this.user = this.store.select(getData);
   }
 }

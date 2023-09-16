@@ -1,3 +1,8 @@
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+
 import { AppState } from './State';
 
-export const selectData = (state: AppState) => state;
+const viewData = createFeatureSelector<AppState>('view');
+export const getData = createSelector(viewData, (state: AppState) => {
+  return state.user;
+});
