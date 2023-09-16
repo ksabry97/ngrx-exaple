@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: red;
+  cursor: pointer;
+  padding: 10px;
+  gap: 10px;
+  border: 1px solid red;
+}
+header div {
+  color: red;
+}
